@@ -14,6 +14,11 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+/**
+ *
+ * @autor Jeison Hernandez
+ * */
+
 @Entity
 @Table(name = "message")
 public class Mensaje implements Serializable {

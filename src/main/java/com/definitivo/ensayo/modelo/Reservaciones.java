@@ -18,8 +18,9 @@ import javax.persistence.Table;
 
 /**
  *
- * @author USUARIO
- */
+ * @autor Jeison Hernandez
+ * */
+
 @Entity
 @Table(name = "reservation")
 public class Reservaciones implements Serializable  {

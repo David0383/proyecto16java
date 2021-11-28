@@ -11,8 +11,9 @@ import org.springframework.stereotype.Service;
 
 /**
  *
- * @author USUARIO
- */
+ * @autor Jeison Hernandez
+ * */
+
 @Service
 public class ServiciosCategoria {
      @Autowired

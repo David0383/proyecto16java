@@ -10,11 +10,11 @@ import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-
 /**
  *
- * @author USUARIO
- */
+ * @autor Jeison Hernandez
+ * */
+
 @Repository
 public class RepositorioSalon {
     

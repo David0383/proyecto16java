@@ -10,8 +10,9 @@ import org.springframework.data.repository.CrudRepository;
 
 /**
  *
- * @author USUARIO
- */
+ * @autor Jeison Hernandez
+ * */
+
 public interface InterfaceCliente extends CrudRepository<Cliente,Integer> {
     
 }

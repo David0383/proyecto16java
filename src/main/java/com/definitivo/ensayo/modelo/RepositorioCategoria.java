@@ -6,15 +6,17 @@ package com.definitivo.ensayo.modelo;
 
 
 import com.definitivo.ensayo.vista.InterfaceCategoria;
-import java.util.List;
-import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+import java.util.Optional;
+
 /**
  *
- * @author USUARIO
- */
+ * @autor Jeison Hernandez
+ * */
+
 @Repository
 public class RepositorioCategoria {
     @Autowired

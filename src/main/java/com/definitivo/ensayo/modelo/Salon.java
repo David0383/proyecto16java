@@ -17,6 +17,12 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+/**
+ *
+ * @autor Jeison Hernandez
+ * */
+
+
 @Entity
 @Table(name = "partyRoom")
 public class Salon implements Serializable{

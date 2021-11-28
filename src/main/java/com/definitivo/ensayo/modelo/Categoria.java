@@ -12,6 +12,11 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+/**
+ *
+ * @author Jeison Hernandez
+ */
+
 @Entity
 @Table(name = "category")
 public class Categoria implements Serializable {

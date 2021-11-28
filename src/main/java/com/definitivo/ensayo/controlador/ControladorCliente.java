@@ -36,7 +36,7 @@ public class ControladorCliente {
     private ServiciosCliente servicio;
   
     @GetMapping("/all")
-    public List<Cliente> getClients(){
+    public List<Cliente> getClient(){
         return servicio.getAll();
     }
 

@@ -15,6 +15,11 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+/**
+ *
+ * @autor Jeison Hernandez
+ * */
+
 @Entity
 @Table(name = "client")
 public class Cliente implements Serializable {

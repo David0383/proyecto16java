@@ -6,8 +6,16 @@
 
 package com.definitivo.ensayo.modelo;
 
-import javax.persistence.*;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.io.Serializable;
+import java.util.List;
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 /**
  *
@@ -15,22 +23,30 @@ import java.io.Serializable;
  */
 
 @Entity
-@Table(name = "Admin")
+@Table(name = "admin")
 public class Admin implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Integer idAdmin;
     private String name;
     private String email;
     private String password;
 
-    public Integer getId() {
-        return id;
+    @OneToMany(cascade = {CascadeType.PERSIST},mappedBy="admin")
+    @JsonIgnoreProperties("admin")
+    public List<Mensaje>messages;
+
+    @OneToMany(cascade = {CascadeType.PERSIST},mappedBy="admin")
+    @JsonIgnoreProperties("admin")
+    public List<Reservaciones>reservations;
+
+    public Integer getIdAdmin() {
+        return idAdmin;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setIdAdmin(Integer idAdmin) {
+        this.idAdmin = idAdmin;
     }
 
     public String getName() {
@@ -56,4 +72,21 @@ public class Admin implements Serializable {
     public void setPassword(String password) {
         this.password = password;
     }
+    public List<Mensaje> getMessages() {
+        return messages;
+    }
+
+    public void setMessages(List<Mensaje> messages) {
+        this.messages = messages;
+    }
+
+    public List<Reservaciones> getReservations() {
+        return reservations;
+    }
+
+    public void setReservations(List<Reservaciones> reservations) {
+        this.reservations = reservations;
+    }
+
+    
 }

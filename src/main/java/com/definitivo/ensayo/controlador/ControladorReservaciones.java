@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  *
- * @author USUARIO
+ * @author Jeison Hernandez
  */
 @RestController
 @RequestMapping("/api/Reservation")
