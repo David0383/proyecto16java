@@ -33,13 +33,7 @@ public class Admin implements Serializable {
     private String email;
     private String password;
 
-    @OneToMany(cascade = {CascadeType.PERSIST},mappedBy="admin")
-    @JsonIgnoreProperties("admin")
-    public List<Mensaje>messages;
 
-    @OneToMany(cascade = {CascadeType.PERSIST},mappedBy="admin")
-    @JsonIgnoreProperties("admin")
-    public List<Reservaciones>reservations;
 
     public Integer getIdAdmin() {
         return idAdmin;
@@ -72,21 +66,7 @@ public class Admin implements Serializable {
     public void setPassword(String password) {
         this.password = password;
     }
-    public List<Mensaje> getMessages() {
-        return messages;
-    }
 
-    public void setMessages(List<Mensaje> messages) {
-        this.messages = messages;
-    }
-
-    public List<Reservaciones> getReservations() {
-        return reservations;
-    }
-
-    public void setReservations(List<Reservaciones> reservations) {
-        this.reservations = reservations;
-    }
 
     
 }

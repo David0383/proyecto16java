@@ -5,7 +5,7 @@
 package com.definitivo.ensayo.modelo;
 
 
-import com.definitivo.ensayo.vista.InterfaceCliente;
+import com.definitivo.ensayo.vista.InterfaceClient;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,19 +19,22 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class RepositorioCliente {
       @Autowired
-    private InterfaceCliente crud1;
+    private InterfaceClient crud1;
 
-    public List<Cliente> getAll(){
-        return (List<Cliente>) crud1.findAll();
+    public List<Client> getAll(){
+        return (List<Client>) crud1.findAll();
     }
-    public Optional<Cliente> getCliente(int id){
+    public Optional<Client> getClient(int id){
         return crud1.findById(id);
     }
 
-    public Cliente save(Cliente cliente){
-        return crud1.save(cliente);
+    public Client save(Client client){
+        return crud1.save(client);
     }
-    public void delete(Cliente cliente){
-        crud1.delete(cliente);
+    public void delete(Client client){
+        crud1.delete(client);
     }
 }
+
+
+

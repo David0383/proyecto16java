@@ -5,7 +5,7 @@
 package com.definitivo.ensayo.controlador;
 
 
-import com.definitivo.ensayo.modelo.Cliente;
+import com.definitivo.ensayo.modelo.Client;
 import com.definitivo.ensayo.modelo.ServiciosCliente;
 import java.util.List;
 import java.util.Optional;
@@ -36,23 +36,23 @@ public class ControladorCliente {
     private ServiciosCliente servicio;
   
     @GetMapping("/all")
-    public List<Cliente> getClient(){
+    public List<Client> getClient(){
         return servicio.getAll();
     }
 
     @GetMapping("/{id}")
-    public Optional<Cliente> getClient(@PathVariable("id") int clientId) {
+    public Optional<Client> getClient(@PathVariable("id") int clientId) {
         return servicio.getClient(clientId);
     }
 
     @PostMapping("/save")
     @ResponseStatus(HttpStatus.CREATED)
-    public Cliente save(@RequestBody Cliente client) {
+    public Client save(@RequestBody Client client) {
         return servicio.save(client);
     }
     @PutMapping("/update")
     @ResponseStatus(HttpStatus.CREATED)
-    public Cliente update(@RequestBody Cliente client) {
+    public Client update(@RequestBody Client client) {
         return servicio.update(client);
     }
 

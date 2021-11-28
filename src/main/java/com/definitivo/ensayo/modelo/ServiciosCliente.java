@@ -21,19 +21,19 @@ public class ServiciosCliente {
        @Autowired
      private RepositorioCliente metodosCrud;
      
-     public List<Cliente> getAll(){
+     public List<Client> getAll(){
         return metodosCrud.getAll();
     }
      
-      public Optional<Cliente> getClient(int clientId) {
-        return metodosCrud.getCliente(clientId);
+      public Optional<Client> getClient(int clientId) {
+        return metodosCrud.getClient(clientId);
     }
 
-    public Cliente save(Cliente client){
+    public Client save(Client client){
         if(client.getIdClient()==null){
             return metodosCrud.save(client);
         }else{
-            Optional<Cliente> e= metodosCrud.getCliente(client.getIdClient());
+            Optional<Client> e= metodosCrud.getClient(client.getIdClient());
             if(e.isPresent()){
                 return metodosCrud.save(client);
             }else{
@@ -42,9 +42,9 @@ public class ServiciosCliente {
         }
     }
 
-    public Cliente update(Cliente client){
+    public Client update(Client client){
         if(client.getIdClient()!=null){
-            Optional<Cliente> e= metodosCrud.getCliente(client.getIdClient());
+            Optional<Client> e= metodosCrud.getClient(client.getIdClient());
             if(!e.isPresent()){
                 if(client.getName()!=null){
                     e.get().setName(client.getName());

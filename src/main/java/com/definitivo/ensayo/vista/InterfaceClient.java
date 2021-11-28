@@ -5,7 +5,7 @@
 package com.definitivo.ensayo.vista;
 
 
-import com.definitivo.ensayo.modelo.Cliente;
+import com.definitivo.ensayo.modelo.Client;
 import org.springframework.data.repository.CrudRepository;
 
 /**
@@ -13,6 +13,6 @@ import org.springframework.data.repository.CrudRepository;
  * @autor Jeison Hernandez
  * */
 
-public interface InterfaceCliente extends CrudRepository<Cliente,Integer> {
+public interface InterfaceClient extends CrudRepository<Client,Integer> {
     
 }

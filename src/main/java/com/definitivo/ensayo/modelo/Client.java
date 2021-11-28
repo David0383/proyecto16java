@@ -21,10 +21,10 @@ import javax.persistence.Table;
  * */
 
 @Entity
-@Table(name = "client")
-public class Cliente implements Serializable {
+@Table(name = "Client")
+public class Client implements Serializable {
     
-     @Id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idClient;
     private String email;
@@ -32,12 +32,12 @@ public class Cliente implements Serializable {
     private String name;
     private Integer age;
     
-     @OneToMany(cascade = {CascadeType.PERSIST},mappedBy="client")
-    @JsonIgnoreProperties("client")
+    @OneToMany(cascade = {CascadeType.PERSIST},mappedBy="client")
+    @JsonIgnoreProperties({"messages", "Client", "reservations"})
     public List<Mensaje>messages;
 
     @OneToMany(cascade = {CascadeType.PERSIST},mappedBy="client")
-    @JsonIgnoreProperties("client")
+    @JsonIgnoreProperties({"Client", "reservations"})
     public List<Reservaciones>reservations;
 
     public Integer getIdClient() {
